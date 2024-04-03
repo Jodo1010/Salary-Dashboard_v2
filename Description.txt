@@ -1,0 +1,32 @@
+load_data():
+Reads salary data from Excel files with the pattern 'FY*-Salaries.xlsx' in the specified directory.
+Extracts the fiscal year from the file name and converts it to an integer.
+Performs data preprocessing, such as converting date columns, mapping appointment and union status, and calculating time employed and time in rank.
+Concatenates the data from multiple files into a single DataFrame.
+Returns the preprocessed data.
+
+main():
+Defines the main functionality of the Streamlit app.
+Sets up the app's title and applies CSS styling.
+Creates sidebar filters for selecting academic years, departments, colleges, ranks, appointment status, and union membership status.
+Filters the data based on user selections.
+Displays instructions for using the table and updates the table automatically based on user selections.
+Displays aggregated salary statistics for the selected filters.
+Handles the logic for displaying salary tables based on selected years, departments, and colleges.
+Displays warnings if data is not available for selected filters or if more than three years are selected.
+Generates and displays a summary of the selected filters.
+
+display_table():
+Takes filtered data, year, and department as input.
+Calculates aggregated salary statistics (mean, median, min, max) for base salary, time employed, and time in rank.
+Formats the aggregated data as a styled table.
+Displays the styled table if data is available.
+Displays warnings if data is not yet available for the selected year or if a department has been merged or reorganized.
+
+
+Summary: 
+The main objective of this code is to provide an interactive dashboard for exploring and analyzing faculty salary data at EMU. The app allows users to filter the data based on various criteria such as academic years, departments, colleges, ranks, appointment status, and union membership status. It displays aggregated salary statistics in a table format, along with warnings if data is unavailable or if a department has been merged or reorganized.
+
+The app leverages Streamlit, a Python library for building interactive web applications, to create a user-friendly interface. It reads salary data from Excel files, preprocesses the data, and dynamically updates the displayed information based on user selections. The code handles data loading, filtering, aggregation, and presentation, providing users with insights into faculty salaries across different dimensions.
+
+Overall, this code serves as a tool for analyzing and visualizing faculty salary data, allowing users to explore and gain insights into salary trends and patterns at EMU.
